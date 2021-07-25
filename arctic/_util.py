@@ -70,7 +70,7 @@ def enable_sharding(arctic, library_name, hashed=True, key='symbol'):
     dbname = lib._db.name
     library_name = lib.get_top_level_collection().name
     try:
-        c.admin.command('enablesharding', dbname)
+        c.admin.command('enableSharding', dbname)
     except pymongo.errors.OperationFailure as e:
         if 'already enabled' not in str(e):
             raise
